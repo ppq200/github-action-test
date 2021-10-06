@@ -8,12 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: '0'
       - name: Get tag
         id: tag
         run: |
-          echo "::set-output name=date::$(date +'%Y%m%d')"
+          echo "::set-output name=date::$(date +'%y%m%d')"
           echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@1.36.0
