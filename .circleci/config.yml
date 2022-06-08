@@ -28,7 +28,7 @@ workflows:
             branches:
               only: master
             tags:
-              only: /^stg-\d{4}\d{2}\d{2}/
+              only: /^stg-\d{4}\d{2}\d{2}.*/
       - say-hello:
           filters:
             branches:
