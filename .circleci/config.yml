@@ -28,8 +28,14 @@ jobs:
 workflows:
   main:
     jobs:
-      - say-hello1
-      - say-hello2
+      - say-hello1:
+          filters:
+            tags:
+              only: /.*/
+      - say-hello2:
+          filters:
+            tags:
+              only: /.*/
       - say-hello3:
           filters:
             branches:
