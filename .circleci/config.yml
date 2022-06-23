@@ -36,9 +36,15 @@ workflows:
               only: master
             tags:
               only: /^stg-\d{4}\d{2}\d{2}.*/
+          requires:
+            - say-hello1
+            - say-hello2
       - say-hello3:
           filters:
             branches:
               ignore: /.*/
             tags:
               only: /^prod-\d{4}\d{2}\d{2}.*/
+          requires:
+            - say-hello1
+            - say-hello2
