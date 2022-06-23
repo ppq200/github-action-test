@@ -26,10 +26,10 @@ jobs:
           name: "Say hello"
           command: "echo 3"
 workflows:
-  say-hello-workflow:
+  main:
     jobs:
-      - say-hello1:
-      - say-hello2:
+      - say-hello1
+      - say-hello2
       - say-hello3:
           filters:
             branches:
