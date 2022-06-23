@@ -30,10 +30,14 @@ workflows:
     jobs:
       - say-hello1:
           filters:
+            branches:
+              only: /.*/
             tags:
               only: /.*/
       - say-hello2:
           filters:
+            branches:
+              only: /.*/
             tags:
               only: /.*/
       - say-hello3:
